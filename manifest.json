@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Deepl Translator",
+  "version": "1.0",
+  "description": "A Firefox extension to translate selected text with Deepl",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": ["activeTab", "contextMenus", "tabs", "<all_urls>"],
+  "browser_action": {
+    "default_title": "My Extension",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["content-style.css"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "atakee@gmail.com",
+      "strict_min_version": "48.0"
+    }
+  }
+}
